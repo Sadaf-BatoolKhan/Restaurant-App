@@ -1,0 +1,279 @@
+*{
+  margin: 0%;
+  padding: 0%;
+}
+
+.navbar{
+  background-color: rgb(2, 167, 173);
+  width: 100%;
+  padding: .5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center   ;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.navbar  input{
+  border-radius: 10px;
+  padding: .5rem;
+  margin: 5px;
+  width: 20%;
+  border: none;
+}
+
+.navbar p{
+  font-size: larger;
+  font-family: cursive;
+  font-style: italic;
+  font-weight: normal;
+}
+.dflex{
+  display: flex;
+}
+.boxes{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap:30px;
+  max-width: 90%;
+  position: relative;
+  left: 5%;
+  /* display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly; */
+  /* margin-top: 1rem; */
+}
+.box{
+  /* border: 1px solid grey; */
+  /* flex-basis: 22%; */
+  text-align: center;
+
+  transition: all .5s ease-in-out;
+  margin-top: 20px;
+}
+.box:last-child {
+  margin-right: auto;
+  margin-left: 30px;
+}
+
+.box-img{
+  width: 80%;
+}
+
+.box:hover{
+  transition: all .5s ease-in-out;
+  box-shadow: 5px 5px rgb(2, 167, 173);
+}
+.Home-bg {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.Home-container {
+  background-image: url('../src/assets/recipie.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* text-align: center; */
+  color: white; 
+  height: 80vh;
+  /* padding: 20px; */
+}
+.router-items ul{
+  display: flex;
+}
+.router-items ul li{
+  list-style-type: none;
+  margin-left: 200px;
+  font-size: large;
+}
+.link-black{
+  color: black;
+}
+.link-black:hover{
+  color: rgb(223, 217, 217);
+  background-color: rgb(14, 155, 160); ;
+}
+.recipe{
+  border: 1px solid black;
+  text-align: center;
+  
+}
+.favt-list{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+
+}
+.recipe {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.recipe img {
+  width: 100%;
+  border-radius: 5px;
+  height: 50vh;
+}
+
+.recipe h3 {
+  margin-top: 10px;
+  font-size: 30px;
+}
+
+.recipe p {
+  margin-top: 5px;
+  font-size: 20px;
+}
+
+.Modal-outside{
+  position: fixed;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  background-color: rgb(206, 192, 192, 0.5);
+}
+.Modal-content{
+position: fixed;
+top:50%;
+left: 50%;
+transform: translate(-50% ,-50%);
+height: auto;
+background-color: white;
+text-align: center;
+padding: 20px;
+}
+.Modal-content img{
+  height: 20vh;
+  width: 25vh;
+  padding: 20px;
+
+}
+.Modal-content ul li{
+  list-style-type: none;
+}
+.close{
+  position: absolute;
+  right: 0;
+}
+.flags{
+  padding: 10px;
+
+}
+.flags-list{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.flags img{
+ width: 80px;
+ height: 50px;
+ overflow-x: hidden;
+ overflow-y: hidden;
+
+}
+.countries{
+  text-align: center;
+  margin-bottom: 30px;
+}
+.browse{
+  text-align: center;
+  margin-top: 40px;
+}
+.countryModal{
+  position: fixed;
+  top:0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+  overflow-y: auto;
+}
+/* .countryModal-content{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap:20px;
+} */
+.countryModal-content img{
+   width:70%;
+   height: 35vh;
+
+}
+.countryModal-content > div{
+    text-align: center;
+}
+
+.countryModal-content > div > img {
+  max-width: 80%;
+  height: auto; 
+}
+.country-recipie{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap:10px;
+}
+.close{
+  cursor: pointer;
+  padding: 10px;
+  margin-right: 30px;
+}
+.recipie{
+  padding: 30px;
+  margin-left: 30px;
+}
+@media (max-width:768px) {
+  .navbar{
+  background-color: rgb(2, 167, 173);
+  width: 100%;
+  padding: .5rem;
+  flex-wrap: wrap;
+
+}
+.navbar  input{
+  border-radius: 10px;
+  padding: .5rem;
+  margin: 5px;
+  width: 50%;
+  border: none;
+  
+}
+.router-items ul li{
+  list-style-type: none;
+  margin-left: 50px;
+  font-size: large;
+  justify-content: center;
+}
+.Home-bg h1{
+  text-align: center;
+}
+.Home-bg p{
+  padding: 10px;
+  text-align: center;
+}
+.favt-list{
+  grid-template-columns: (1fr, 1fr);
+  gap: 20px;
+
+}
+.boxes{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap:30px;
+ 
+}
+.box-img{
+  width: 100%;
+}
+}
+
+
+
+
+
